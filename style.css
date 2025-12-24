@@ -1,0 +1,918 @@
+/* ===================================
+   TaxoGenius - Glassmorphism Design
+   Nature-Friendly Color Palette
+=================================== */
+
+:root {
+    /* Primary Colors - Nature Greens */
+    --green-900: #1b5e20;
+    --green-800: #2e7d32;
+    --green-700: #388e3c;
+    --green-600: #43a047;
+    --green-500: #4caf50;
+    --green-400: #66bb6a;
+    --green-300: #81c784;
+    --green-200: #a5d6a7;
+    --green-100: #c8e6c9;
+    --green-50: #e8f5e9;
+
+    /* Neutral Colors */
+    --white: #ffffff;
+    --gray-50: #fafafa;
+    --gray-100: #f5f5f5;
+    --gray-200: #eeeeee;
+    --gray-300: #e0e0e0;
+    --gray-600: #757575;
+    --gray-800: #424242;
+    --gray-900: #212121;
+
+    /* Feedback Colors */
+    --success: #2e7d32;
+    --error: #c62828;
+    --warning: #f9a825;
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.25);
+    --glass-shadow: rgba(0, 0, 0, 0.1);
+
+    /* Typography */
+    --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Spacing */
+    --section-gap: 3rem;
+    --card-padding: 2rem;
+    --border-radius: 20px;
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--green-900) 0%, var(--green-700) 50%, var(--green-800) 100%);
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ===================================
+   Hero Section
+=================================== */
+.hero {
+    position: relative;
+    padding: 5rem 1.5rem 4rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-weight: 300;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.hero-decoration {
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* ===================================
+   Glass Card - Glassmorphism
+=================================== */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: var(--card-padding);
+    box-shadow: 0 8px 32px var(--glass-shadow);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: visible;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================================
+   Section Titles
+=================================== */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--glass-border);
+}
+
+.section-subtitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--green-100);
+}
+
+/* ===================================
+   Lecture Section
+=================================== */
+.lecture-section {
+    padding: var(--section-gap) 0;
+}
+
+.content-block {
+    margin-bottom: 1.5rem;
+}
+
+.content-block h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--green-200);
+}
+
+.content-block p {
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.content-block strong {
+    color: var(--green-100);
+}
+
+/* ===================================
+   Classification Pyramid
+=================================== */
+.pyramid-container {
+    text-align: center;
+    overflow: visible;
+}
+
+.pyramid-intro {
+    margin-bottom: 2rem;
+    opacity: 0.85;
+}
+
+.pyramid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 2rem 0;
+    overflow: visible;
+    position: relative;
+}
+
+.pyramid-layer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+.pyramid-layer:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.pyramid-layer::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gray-900);
+    color: var(--white);
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    white-space: nowrap;
+    max-width: 300px;
+    white-space: normal;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pyramid-layer:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: 120%;
+}
+
+/* Pyramid Layer Colors & Widths - Top to bottom (Âlem widest → Tür narrowest) */
+.layer-7 {
+    width: 80%;
+    background: linear-gradient(135deg, #1565c0, #1976d2);
+}
+
+.layer-6 {
+    width: 63%;
+    background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+}
+
+.layer-5 {
+    width: 50%;
+    background: linear-gradient(135deg, #c62828, #e53935);
+}
+
+.layer-4 {
+    width: 40%;
+    background: linear-gradient(135deg, #ef6c00, #fb8c00);
+}
+
+.layer-3 {
+    width: 32%;
+    background: linear-gradient(135deg, #fbc02d, #fdd835);
+    color: var(--gray-900);
+}
+
+.layer-2 {
+    width: 25%;
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+}
+
+.layer-1 {
+    width: 20%;
+    background: linear-gradient(135deg, #00695c, #00897b);
+}
+
+.pyramid-note {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+}
+
+.pyramid-note p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ===================================
+   Binomial Naming Panel
+=================================== */
+.naming-panel {
+    text-align: center;
+}
+
+.naming-schema {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+}
+
+.name-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+}
+
+.name-part.genus {
+    background: linear-gradient(135deg, rgba(46, 125, 50, 0.6), rgba(67, 160, 71, 0.6));
+}
+
+.name-part.epithet {
+    background: linear-gradient(135deg, rgba(0, 105, 92, 0.6), rgba(0, 137, 123, 0.6));
+}
+
+.part-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.part-example {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.part-rule {
+    font-size: 0.8rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+}
+
+.name-divider {
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 0.6;
+}
+
+.name-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.scientific-name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--green-100);
+}
+
+.common-name {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.naming-examples {
+    text-align: left;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.naming-examples h4 {
+    margin-bottom: 1rem;
+    color: var(--green-200);
+}
+
+.naming-examples ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.naming-examples li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.naming-examples li:last-child {
+    border-bottom: none;
+}
+
+.naming-examples em {
+    color: var(--green-100);
+}
+
+.naming-examples .note {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin-top: 1rem;
+}
+
+/* ===================================
+   Video Section
+=================================== */
+.video-section {
+    padding-bottom: var(--section-gap);
+}
+
+.video-description {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+}
+
+.play-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.video-placeholder:hover .play-icon {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.video-placeholder p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.video-note {
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+/* ===================================
+   Quiz Section
+=================================== */
+.quiz-section {
+    padding-bottom: var(--section-gap);
+}
+
+.quiz-container {
+    min-height: 300px;
+}
+
+.quiz-start {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.quiz-start p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Quiz Game */
+.quiz-game {
+    padding: 1rem 0;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.quiz-progress {
+    font-weight: 600;
+    color: var(--green-200);
+}
+
+.quiz-score {
+    font-weight: 600;
+    color: var(--green-100);
+}
+
+.question-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.question-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.answer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.feedback {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 12px;
+    animation: fadeIn 0.3s ease;
+}
+
+.feedback.correct {
+    background: rgba(46, 125, 50, 0.3);
+    border: 1px solid var(--success);
+}
+
+.feedback.incorrect {
+    background: rgba(198, 40, 40, 0.3);
+    border: 1px solid var(--error);
+}
+
+/* Quiz Result */
+.quiz-result {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.result-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: bounceIn 0.6s ease;
+}
+
+.quiz-result h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--green-100);
+}
+
+.result-score {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.result-message {
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+/* Binomial Challenge */
+.binomial-challenge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    border: 2px dashed var(--glass-border);
+}
+
+.binomial-challenge h4 {
+    color: var(--green-100);
+    margin-bottom: 0.75rem;
+}
+
+.binomial-challenge p {
+    margin-bottom: 0.5rem;
+}
+
+.challenge-hint {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-style: italic;
+    margin-bottom: 1rem !important;
+}
+
+.challenge-input-group {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.challenge-input-group input {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    font-style: italic;
+    border: 2px solid var(--glass-border);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    min-width: 200px;
+    transition: all 0.3s ease;
+}
+
+.challenge-input-group input:focus {
+    outline: none;
+    border-color: var(--green-400);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.challenge-input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+}
+
+.challenge-feedback {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.challenge-feedback.correct {
+    background: rgba(46, 125, 50, 0.4);
+    color: var(--green-100);
+}
+
+.challenge-feedback.incorrect {
+    background: rgba(198, 40, 40, 0.4);
+    color: #ffcdd2;
+}
+
+/* ===================================
+   Buttons
+=================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 2rem;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--green-600), var(--green-500));
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--green-500), var(--green-400));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.5);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    border: 1px solid var(--glass-border);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.btn-true {
+    background: linear-gradient(135deg, var(--green-700), var(--green-600));
+    color: var(--white);
+    min-width: 140px;
+}
+
+.btn-true:hover {
+    background: linear-gradient(135deg, var(--green-600), var(--green-500));
+    transform: translateY(-2px);
+}
+
+.btn-false {
+    background: linear-gradient(135deg, #c62828, #e53935);
+    color: var(--white);
+    min-width: 140px;
+}
+
+.btn-false:hover {
+    background: linear-gradient(135deg, #e53935, #ef5350);
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* ===================================
+   Footer
+=================================== */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ===================================
+   Utilities
+=================================== */
+.hidden {
+    display: none !important;
+}
+
+/* ===================================
+   Animations
+=================================== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===================================
+   Responsive Design
+=================================== */
+@media (max-width: 768px) {
+    :root {
+        --card-padding: 1.5rem;
+        --section-gap: 2rem;
+    }
+
+    .hero {
+        padding: 3rem 1rem 2.5rem;
+    }
+
+    .pyramid-layer {
+        height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .layer-7 {
+        width: 98%;
+    }
+
+    .layer-6 {
+        width: 85%;
+    }
+
+    .layer-5 {
+        width: 72%;
+    }
+
+    .layer-4 {
+        width: 60%;
+    }
+
+    .layer-3 {
+        width: 48%;
+    }
+
+    .layer-2 {
+        width: 36%;
+    }
+
+    .layer-1 {
+        width: 26%;
+    }
+
+    .pyramid-layer::after {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.75rem;
+        max-width: 250px;
+    }
+
+    .naming-schema {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .name-divider {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .question-text {
+        font-size: 1.05rem;
+    }
+
+    .answer-buttons {
+        gap: 1rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .pyramid-layer {
+        height: 40px;
+        font-size: 0.8rem;
+    }
+
+    .btn-true,
+    .btn-false {
+        min-width: 120px;
+    }
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TaxoQuiz - Canlıların Sınıflandırılması ve Taksonomi Eğitim Portalı">
+    <title>TaxoQuiz | Doğanın Büyük Kütüphanesi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">🌿 Doğanın Büyük Kütüphanesi</h1>
+            <p class="hero-subtitle">Canlıların Sınıflandırılması ve Taksonomi Dünyasına Hoş Geldiniz</p>
+        </div>
+        <div class="hero-decoration"></div>
+    </header>
+
+    <main class="container">
+        <!-- Konu Anlatım Bölümü -->
+        <section class="lecture-section" id="lecture">
+            <div class="glass-card">
+                <h2 class="section-title">📚 Konu Anlatımı</h2>
+
+                <div class="content-block">
+                    <h3>Canlı Çeşitliliği ve Sınıflandırma</h3>
+                    <p>
+                        Dünya üzerinde yaklaşık <strong>1,2 milyon</strong> canlı türü keşfedilmiştir ve bilim insanları
+                        her yıl binlerce yeni tür keşfetmeye devam etmektedir. Bu muazzam çeşitlilik içinde kaybolmamak
+                        için bir düzene ihtiyaç vardır.
+                    </p>
+                    <p>
+                        Bir kütüphaneyi düşünün: Kitaplar rastgele yerleştirilse istediğiniz kitabı bulmak imkansız
+                        olurdu.
+                        Ancak kitaplar konularına göre raflara ayrıldığında, aradığınız bilgiye kolayca ulaşabilirsiniz.
+                        <strong>Taksonomi</strong> de canlılar için aynı işlevi görür — doğanın kütüphanesi için bir
+                        düzen sistemidir.
+                    </p>
+                    <p>
+                        Modern sınıflandırma sistemi, canlıların sadece fiziksel özelliklerini değil, aynı zamanda
+                        <strong>akrabalık ilişkilerini (filogenetik)</strong> ve genetik benzerliklerini temel alır.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sınıflandırma Piramidi -->
+            <div class="glass-card pyramid-container">
+                <h3 class="section-subtitle">🔺 Sınıflandırma Piramidi</h3>
+                <div class="pyramid">
+                    <div class="pyramid-layer layer-1"
+                        data-tooltip="TÜR: Sınıflandırmanın en dar basamağı. Verimli (doğurgan) döl verebilen bireyler aynı türdendir.">
+                        <span>Tür</span>
+                    </div>
+                    <div class="pyramid-layer layer-2"
+                        data-tooltip="CİNS: Birbirine benzeyen türlerin grubu. Örn: Panthera (Aslan, Kaplan)">
+                        <span>Cins</span>
+                    </div>
+                    <div class="pyramid-layer layer-3"
+                        data-tooltip="AİLE: Birbirine yakın cinsleri barındırır. Örn: Kedigiller">
+                        <span>Aile</span>
+                    </div>
+                    <div class="pyramid-layer layer-4"
+                        data-tooltip="TAKIM: Benzer ailelerin gruplandığı basamak. Örn: Etobur takımı">
+                        <span>Takım</span>
+                    </div>
+                    <div class="pyramid-layer layer-5"
+                        data-tooltip="SINIF: Ortak özelliklere sahip takımları içerir. Örn: Memeliler">
+                        <span>Sınıf</span>
+                    </div>
+                    <div class="pyramid-layer layer-6" data-tooltip="ŞUBE: Âlem altında yer alır. Örn: Kordalılar">
+                        <span>Şube</span>
+                    </div>
+                    <div class="pyramid-layer layer-7"
+                        data-tooltip="ÂLEM: En geniş sınıflandırma basamağı. Örn: Hayvanlar, Bitkiler">
+                        <span>Âlem</span>
+                    </div>
+                </div>
+
+                <div class="pyramid-note">
+                    <p>💡 <strong>Hatırla:</strong> Âlemden türe gidildikçe birey sayısı azalır, canlılar arasındaki
+                        benzerlik (protein, DNA) artar.</p>
+                </div>
+            </div>
+
+            <!-- Binomial Adlandırma Paneli -->
+            <div class="glass-card naming-panel">
+                <h3 class="section-subtitle">🏷️ Binomial (İkili) Adlandırma</h3>
+                <p>Carl Linnaeus'un önerdiği bu sistemde her türe iki sözcükten oluşan bir bilimsel ad verilir:</p>
+
+                <div class="naming-schema">
+                    <div class="name-part genus">
+                        <span class="part-label">Cins Adı</span>
+                        <span class="part-example">Homo</span>
+                        <span class="part-rule">Büyük harfle başlar</span>
+                    </div>
+                    <div class="name-divider">+</div>
+                    <div class="name-part epithet">
+                        <span class="part-label">Tamamlayıcı Ad</span>
+                        <span class="part-example">sapiens</span>
+                        <span class="part-rule">Küçük harfle başlar</span>
+                    </div>
+                    <div class="name-divider">=</div>
+                    <div class="name-result">
+                        <span class="scientific-name">Homo sapiens</span>
+                        <span class="common-name">(İnsan)</span>
+                    </div>
+                </div>
+
+                <div class="naming-examples">
+                    <h4>Örnekler:</h4>
+                    <ul>
+                        <li><em>Pinus nigra</em> — Karaçam</li>
+                        <li><em>Pinus pinea</em> — Fıstıkçamı</li>
+                        <li><em>Panthera leo</em> — Aslan</li>
+                        <li><em>Felis catus</em> — Evcil Kedi</li>
+                    </ul>
+                    <p class="note">📌 <em>Pinus nigra</em> ve <em>Pinus pinea</em> aynı <strong>cins</strong> (Pinus)
+                        içinde yer alır.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Bölümü -->
+        <section class="video-section" id="video">
+            <div class="glass-card">
+                <h2 class="section-title">🎬 Sınıflandırmanın Temelleri</h2>
+                <p class="video-description">
+                    Aşağıdaki video ile canlıların sınıflandırılması konusunu görsel olarak pekiştirin.
+                    Taksonomi basamaklarını ve binomial adlandırma sistemini örneklerle öğrenin.
+                </p>
+                <div class="video-container">
+                    <div class="video-placeholder">
+                        <div class="play-icon">▶</div>
+                        <p>Video Oynatıcı</p>
+                        <span class="video-note">Video yüklendiğinde burada görüntülenecektir</span>
+                    </div>
+                    <!-- Gerçek video için iframe -->
+                    <iframe src="assets/life_library.mp4" title="Yaşam Kütüphanesi" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Bölümü -->
+        <section class="quiz-section" id="quiz">
+            <div class="glass-card">
+                <h2 class="section-title">🧪 Bilgini Test Et</h2>
+
+                <div class="quiz-container" id="quizContainer">
+                    <!-- Quiz Başlangıç -->
+                    <div class="quiz-start" id="quizStart">
+                        <p>10 soruluk Doğru/Yanlış testine hazır mısın?</p>
+                        <button class="btn btn-primary" id="startQuizBtn">Teste Başla</button>
+                    </div>
+
+                    <!-- Quiz Soruları -->
+                    <div class="quiz-game hidden" id="quizGame">
+                        <div class="quiz-header">
+                            <span class="quiz-progress" id="quizProgress">Soru 1/10</span>
+                            <span class="quiz-score" id="quizScore">Puan: 0</span>
+                        </div>
+
+                        <div class="question-card">
+                            <p class="question-text" id="questionText">Soru yükleniyor...</p>
+                        </div>
+
+                        <div class="answer-buttons">
+                            <button class="btn btn-true" id="btnTrue">✓ Doğru</button>
+                            <button class="btn btn-false" id="btnFalse">✗ Yanlış</button>
+                        </div>
+
+                        <div class="feedback hidden" id="feedback">
+                            <p id="feedbackText"></p>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Sonuç -->
+                    <div class="quiz-result hidden" id="quizResult">
+                        <div class="result-icon" id="resultIcon">🏆</div>
+                        <h3 id="resultTitle">Tebrikler!</h3>
+                        <p class="result-score" id="resultScore">10/10 doğru cevap!</p>
+                        <p class="result-message" id="resultMessage">Muhteşem bir performans sergiledi!</p>
+
+                        <!-- Binomial Challenge -->
+                        <div class="binomial-challenge" id="binomialChallenge">
+                            <h4>🎯 Son Görev: Binomial Challenge</h4>
+                            <p>Aşağıdaki canlının bilimsel adını doğru formatta yaz:</p>
+                            <p class="challenge-hint">İpucu: Karaçam (Cins: Pinus, Tür: nigra)</p>
+                            <div class="challenge-input-group">
+                                <input type="text" id="binomialInput" placeholder="Ör: Homo sapiens" autocomplete="off">
+                                <button class="btn btn-primary" id="checkBinomialBtn">Kontrol Et</button>
+                            </div>
+                            <p class="challenge-feedback hidden" id="challengeFeedback"></p>
+                        </div>
+
+                        <button class="btn btn-secondary" id="restartQuizBtn">Testi Tekrarla</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>🌱 TaxoQuiz — Biyoloji 9. Sınıf | Canlıların Sınıflandırılması</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
